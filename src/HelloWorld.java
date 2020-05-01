@@ -17,11 +17,14 @@ public class HelloWorld {
 //        long myNumber =
 //                System.out.println("myNumber " + myNumber);
 
-          double myNumber = 3.14;
-          System.out.println("myNumber " + myNumber);
+//          double myNumber = 3.14;
+//          System.out.println("myNumber " + myNumber);
 
 //        long myNumber = 123L;
 //        System.out.println("myNumber " + myNumber);
+
+          long myNumber = 123;
+          System.out.println("myNumber " + myNumber);
 
 
     }
