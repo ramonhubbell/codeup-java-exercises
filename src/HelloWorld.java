@@ -5,5 +5,8 @@ public class HelloWorld {
         byte myNumber = 7;
         System.out.println("myNumber " + myNumber);
 
+        String myName = "Ramon";
+        System.out.println("myName " + myName);
+
     }
 }
