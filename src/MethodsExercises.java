@@ -11,7 +11,6 @@ public class MethodsExercises {
         System.out.println("modulus() " + modulus(28,5));
         getInteger(1, 10);
         getFactorial(input);
-        System.out.println("getPower() " + getPower(2,5));
     }
 
     public static int sum ( int num1, int num2 ) {
@@ -59,19 +58,6 @@ public class MethodsExercises {
 
     }
 
-    //    public static int getInteger(Scanner scan) {
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = scan.nextInt();
-//        if ( userInput > 1 && userInput < 10) {
-//            System.out.println("You entered a valid number.");
-//            return 0;
-//        } else {
-//            System.out.println("You entered and invalid number, try again.");
-//            getInteger(scan);
-//        }
-//        return 0;
-//    }
-
 //3.  Calculate the factorial of a number.
 //
 //    Prompt the user to enter an integer from 1 to 10.
@@ -102,24 +88,16 @@ public class MethodsExercises {
             return result;
     }
 
-    public static long getPower(int base, int exponent) {
-        long result = 1;
-        for (int i = 1; i <= exponent; i++) {
-            result = result * base;
-        }
-        return result;
-    }
+//   4.  Create an application that simulates dice rolling.
+//       Ask the user to enter the number of sides for a pair of dice.
+//       Prompt the user to roll the dice.
+//       "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+//       Use static methods to implement the method(s) that generate the random numbers.
+//       Use the .random method of the java.lang.Math class to generate random numbers.
 
-//    public static long getPower(int base, int exponent) {
-//        if (exponent == 0) {
-//            return 1;
-//        } else if (exponent == 1) {
-//            return base;
-//        } else if (exponent == 2) {
-//            return base * base;
-//        }
-//        return base * getPower(base, exponent - 1);
-//    }
+
+
+
 
 
 
