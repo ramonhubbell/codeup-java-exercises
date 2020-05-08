@@ -2,6 +2,8 @@ public class NewPerson {
 
     public static void main (String [] args) {
 
+
+
         Person ramon = new Person ("Ramon");
         System.out.println( "ramon.getName() = " + ramon.getName());
 
