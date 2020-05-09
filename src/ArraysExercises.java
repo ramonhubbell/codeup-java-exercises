@@ -7,8 +7,8 @@ public class ArraysExercises {
 
 //        1. Array Basics
 
-        int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(numbers);
+//        int[] numbers = {1, 2, 3, 4, 5};
+//        System.out.println(numbers);
 
 //        Create an array that holds 3 Person objects.
         String [] Person = {"Ramon", "David", "Jason"};
@@ -29,16 +29,24 @@ public class ArraysExercises {
 //        It should return an array whose length is 1 greater than the passed array, with
 //        the passed person object at the end of the array.
 
-        System.out.println(addPerson( Person, "Buttons" ));
+        String [] newArray = addPerson(Person, "Sam");
+        System.out.print(Arrays.toString(newArray));
+
+//        System.out.println(addPerson( Person, "Buttons" ));
+//        addPerson( Person, "Elizabeth");
 
     }
 
-    public static String addPerson( String [] namesArray, String name) {
+    public static String [] addPerson( String [] namesArray, String name) {
         String [] newNamesArray = Arrays.copyOf( namesArray, namesArray.length + 1);
-        for (String n : namesArray) {
-            return newNamesArray[Integer.parseInt(n)];
+//        System.out.println(newNamesArray.length);
+        newNamesArray[3] = name;
+//        System.out.println(name);
+        for (String n : newNamesArray) {
+//            return (n);
+            System.out.println(n);
         }
-        return "";
+        return newNamesArray;
     }
 
 
