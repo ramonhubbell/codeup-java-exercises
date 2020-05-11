@@ -40,7 +40,7 @@ public class ArraysExercises {
     public static String [] addPerson( String [] namesArray, String name) {
         String [] newNamesArray = Arrays.copyOf( namesArray, namesArray.length + 1);
 //        System.out.println(newNamesArray.length);
-        newNamesArray[3] = name;
+        newNamesArray[ newNamesArray.length -1 ] = name;
 //        System.out.println(name);
         for (String n : newNamesArray) {
 //            return (n);
