@@ -2,12 +2,12 @@ package shapes;
 
 public class Rectangle {
 //    It should have protected properties for both length and width.
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
 //    Rectangle should define a constructor that accepts two numbers
 //    for length and width, and sets those properties.
-    public Rectangle (int rectangleLength, int rectangleWidth) {
+    public Rectangle (double rectangleLength, double rectangleWidth) {
         this.length = rectangleLength;
         this.width = rectangleWidth;
     }
@@ -17,11 +17,11 @@ public class Rectangle {
 //    perimeter = 2 x length + 2 x width
 //    area = length x width
 
-    public int getArea () {
+    public double getArea () {
         return this.length * this.width;
     }
 
-    public int getPerimeter () {
+    public double getPerimeter () {
         return (2 * this.length) + ( 2 * this.width);
     }
 

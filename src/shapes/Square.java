@@ -4,9 +4,9 @@ public class Square extends Rectangle {
 //    Square should define a constructor that accepts one argument,
 //    side, and calls the parent's constructor to set both the length
 //    and width to the value of side.
-    protected int side;
+    protected double side;
 
-    public Square (int squareSide) {
+    public Square (double squareSide) {
         super(squareSide, squareSide);
         this.side = squareSide;
     }
@@ -15,13 +15,14 @@ public class Square extends Rectangle {
 //    with the following definitions for a square:
 //    perimeter = 4 x side
 //    area = side ^ 2
-    public int getArea () {
-        return side * 2;
+    public double getArea () {
+        return Math.pow (super.width, 2);
     }
 
-    public int getPerimeter () {
-        return 4 * side;
+    public double getPerimeter () {
+        return 4 * super.length;
     }
+
 
 
 
