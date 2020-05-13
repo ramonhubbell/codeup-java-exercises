@@ -22,6 +22,21 @@ public class ShapesTest {
 //        System.out.println("box2.getArea(): " + box2.getArea());
 
 
+//        Modify your ShapesTest class, use it to:
+//
+//        declare a variable of the type Measurable named myShape.
+//        Test your code by creating instances of both Square and Rectangle
+//        and assigning them to myShape so you can display the shape's area and perimeter.
+
+        Measurable myShape = new Square(5);
+
+        System.out.println( "myShape.getArea(): " + myShape.getArea());
+        System.out.println( "myShape.getPerimeter(): " + myShape.getPerimeter());
+
+        myShape = new Rectangle(5,4);
+        System.out.println( "myShape2.getArea(): " + myShape.getArea());
+        System.out.println( "myShape2.getPerimeter()" + myShape.getPerimeter());
+
 
     }
 }

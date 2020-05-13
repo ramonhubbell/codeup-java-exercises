@@ -7,10 +7,11 @@ public class Rectangle extends Quadrilateral implements Measurable{
 
 //    Rectangle should define a constructor that accepts two numbers
 //    for length and width, and sets those properties.
-//    public Rectangle (double rectangleLength, double rectangleWidth) {
+    public Rectangle (double rectangleLength, double rectangleWidth) {
 //        this.length = rectangleLength;
 //        this.width = rectangleWidth;
-//    }
+        super(rectangleLength, rectangleWidth);
+    }
 
 //    Create two methods on the Rectangle class, getArea and getPerimeter
 //    that return the respective values. The formulas for both follow:
@@ -34,12 +35,12 @@ public class Rectangle extends Quadrilateral implements Measurable{
         return this.length * this.width;
     }
 
-    public double setLength() {
-        return this.length;
+    public void setLength( double l) {
+        this.length = l;
     }
 
-    public double setWidth() {
-        return this.width;
+    public void setWidth( double w) {
+        this.width = w;
     }
 
 
