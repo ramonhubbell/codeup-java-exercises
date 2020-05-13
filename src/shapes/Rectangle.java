@@ -26,4 +26,21 @@ public class Rectangle extends Quadrilateral implements Measurable{
 //    }
 
 
+    public double getPerimeter() {
+        return (2 * this.length) + (2 * this.width);
+    }
+
+    public double getArea() {
+        return this.length * this.width;
+    }
+
+    public double setLength() {
+        return this.length;
+    }
+
+    public double setWidth() {
+        return this.width;
+    }
+
+
 }
