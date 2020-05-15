@@ -62,8 +62,7 @@ public class GradesApplication {
         System.out.println("\n\nWhat student would you like to see more information on?");
     }
 
-    private static String askForUsername() {
-        HashMap<String, Student> students = new HashMap<>();
+    private static String askForUsername(HashMap<String, Student> students) {
         Input input = new Input();
         System.out.println("\n\nWhat student would you like to see more information on?");
         String response = input.getString();
