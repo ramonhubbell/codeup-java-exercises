@@ -21,5 +21,6 @@ public class InputTest {
 
         System.out.println( "input.getDouble(): " + input.getDouble());
 
+
     }
 }

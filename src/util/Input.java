@@ -38,23 +38,36 @@ public class Input {
 
 //    int getInt(int min, int max). The getInt(int min, int max) method should keep
 //    prompting the user for input until they give an integer within the min and max.
-    public int getInt(int min, int max) {
+    public int getInt(int min, int max)  {
         System.out.println("Please enter a number between " + min + " and " + max + ".");
-        int getIntMinMaxInput = Integer.parseInt(scanner.nextLine());
-        if (getIntMinMaxInput < min || getIntMinMaxInput > max) {
-            System.out.println("You entered an invalid integer. Please try again.");
-            return getInt(min, max);
-        } else {
-            System.out.println("You entered a valid integer.");
+//        int getIntMinMaxInput = Integer.parseInt(scanner.nextLine());
+        try {
+            int getIntMinMaxInput = Integer.valueOf(getString());
+
+            if (getIntMinMaxInput < min || getIntMinMaxInput > max) {
+                System.out.println("You entered an invalid integer. Please try again.");
+                return getInt(min, max);
+            } else {
+                System.out.println("You entered a valid integer.");
+            }
+            return getIntMinMaxInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Need a int for this input.");
         }
-        return getIntMinMaxInput;
+        return 0;
     }
 
 //    int getInt()
     public int getInt() {
         System.out.println("Please enter an integer.");
-        int getIntInput = Integer.parseInt(scanner.nextLine());
-        return getIntInput;
+//        int getIntInput = Integer.parseInt(scanner.nextLine());
+        try {
+            int getIntInput = Integer.valueOf(getString());
+            return getIntInput;
+        } catch (NumberFormatException e){
+            System.out.println("Please enter another integer.");
+        }
+        return 1;
     }
 
 //    double getDouble(double min, double max). The getDouble method should do the same

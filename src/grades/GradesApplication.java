@@ -62,16 +62,16 @@ public class GradesApplication {
         System.out.println("\n\nWhat student would you like to see more information on?");
     }
 
-    private static String askForUsername(HashMap<String, Student> students) {
-        Input input = new Input();
-        System.out.println("\n\nWhat student would you like to see more information on?");
-        String response = input.getString();
-        if (students.containsKey(response); // true) {
-            System.out.println("Sorry, no student found with the GitHub username of" + "\"" + response + "\".";
-            return askForUsername();
-        }
-        return response;
-    }
+//    private static String askForUsername(HashMap<String, Student> students) {
+//        Input input = new Input();
+//        System.out.println("\n\nWhat student would you like to see more information on?");
+//        String response = input.getString();
+//        if (students.containsKey(response); // true) {
+//            System.out.println("Sorry, no student found with the GitHub username of" + "\"" + response + "\".";
+//            return askForUsername();
+//        }
+////        return response;
+//    }
 
 
 
