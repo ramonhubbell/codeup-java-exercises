@@ -6,6 +6,8 @@ import java.util.HashMap;
 
 public class GradesApplication {
 
+    static Input input = new Input();
+
     public static void main(String[] args) {
 
 //        Inside the main method, create a HashMap named students.
@@ -13,7 +15,7 @@ public class GradesApplication {
 //        usernames, and values that are Student objects. Create at
 //        least 4 student objects with at least 3 grades each, and
 //        add them to the map.
-        Input input = new Input();
+
         HashMap<String, Student> students = new HashMap<>();
         Student student1 = new Student("Steve");
         student1.addGrade(80);
@@ -40,14 +42,7 @@ public class GradesApplication {
         students.put("username3", student3);
         students.put("username4", student4);
 
-//        for (String i : students.keySet()) {
-//            System.out.println("key: " + i + " value: " + students.get(i).getName());
-//        }
-//        System.out.println(displayWelcome());
-//        for (String username : students.keySet()) {
-//            System.out.printf("| %s | ", username);
-//        }
-//        askForUsername();
+        displayWelcome(students);
 
 
     }
@@ -55,24 +50,22 @@ public class GradesApplication {
     public static void displayWelcome(HashMap<String, Student> students) {
         System.out.println("Welcome!\n\nHere are the GitHub usernames of our students:\n");
         int i = 1;
-        for (String username : students.keySet()) {
-            System.out.printf("| %s | ", username);
-            i++;
-        }
-        System.out.println("\n\nWhat student would you like to see more information on?");
+
+        do {
+            for (String username : students.keySet()) {
+                System.out.printf("| %s | ", username);
+                i++;
+            }
+            System.out.println("\n\nWhat student would you like to see more information on?");
+            String typedKey = input.getString();
+            if (students.containsKey(typedKey)) {
+                System.out.println("Name: " + students.get(typedKey).getName() + " - " + "GitHub Username: " + typedKey);
+            } else {
+                System.out.println("Sorry, no student found with the GitHub username of " + "\"" + typedKey + "\"" + ".");
+            }
+            System.out.println("Would you like to see another student?");
+        } while (input.yesNo());
+        System.out.println("Goodbye, and have a wonderful day!");
     }
-
-    private static String askForUsername(HashMap<String, Student> students) {
-        Input input = new Input();
-        System.out.println("\n\nWhat student would you like to see more information on?");
-        String response = input.getString();
-        if (students.containsKey(response); // true) {
-            System.out.println("Sorry, no student found with the GitHub username of" + "\"" + response + "\".";
-            return askForUsername();
-        }
-        return response;
-    }
-
-
 
 }
