@@ -61,27 +61,33 @@ public class ControlFlowExercises {
 //        }
 
 //        Table of powers
-         System.out.println("What number would you like to go up to? ");
-         int aNumber = Integer.parseInt(input.nextLine());
-         System.out.println("Here is your table!");
-         System.out.println(" ");
-         System.out.println("number | squared | cubed");
-         System.out.println("------ | ------- | -----");
+            boolean userContinue = true;
+        do {
+            System.out.println("What number would you like to go up to? ");
+            int aNumber = Integer.parseInt(input.nextLine());
+            System.out.println("Here is your table!");
+            System.out.println(" ");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
 
-         for ( int i = 1; i <= aNumber; i++ ) {
-             if ( i == aNumber) {
-                 System.out.println(aNumber + "      | " + (aNumber * aNumber) + "       | " + (aNumber * aNumber * aNumber));
-             } else if ( i < aNumber && i < 4) {
-                 System.out.println( i + "      | " + (i * i) + "       | " + ( i * i * i));
-             } else if ( i < aNumber && i >= 4 && i > 10) {
-                 System.out.println( i + "    | " + (i * i) + "| " + ( i * i * i));
-             } else {
-                 System.out.println( i + "      | " + ( i * i ) + "       | " + ( i * i * i));
-             }
+            for (int i = 1; i <= aNumber; i++) {
+                if (i == aNumber) {
+                    System.out.println(aNumber + "      | " + (aNumber * aNumber) + "       | " + (aNumber * aNumber * aNumber));
+                } else if (i < aNumber && i < 4) {
+                    System.out.println(i + "      | " + (i * i) + "       | " + (i * i * i));
+                } else if (i < aNumber && i >= 4 && i > 10) {
+                    System.out.println(i + "    | " + (i * i) + "| " + (i * i * i));
+                } else {
+                    System.out.println(i + "      | " + (i * i) + "       | " + (i * i * i));
+                }
+            }
+                System.out.println("Do you want to continue? (y/n)");
+                String response = input.nextLine();
+                if (!response.equals("y")) {
+                userContinue = false;
+                }
 
-
-     }
-
+        } while (userContinue);
 
 
 
