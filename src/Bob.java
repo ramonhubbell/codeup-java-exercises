@@ -6,17 +6,17 @@ public class Bob {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Ask Bob a question.");
+        System.out.println("Ask or tell Bob something.");
         String questionBob = input.nextLine().trim();
-        System.out.println("Sure.");
-
-        System.out.println("Yell at Bob!");
-        String yellQuestionBob = input.nextLine().toUpperCase();
-        System.out.println("Whoa, chill out!");
-
-        System.out.println("Don't respond to Bob.");
-        String noResponseBob = input.nextLine();
-        System.out.println("Fine. Be that way!");
-
+        System.out.println(questionBob);
+        if (questionBob.endsWith("?")){
+            System.out.println("Sure.");
+        } else if (questionBob.endsWith("!")) {
+            System.out.println("Whoa, chill out!");
+        } else if ( questionBob.equals("")) {
+            System.out.println("Fine. Be that way!");
+        } else {
+            System.out.println("Whatever.");
+        }
     }
 }
