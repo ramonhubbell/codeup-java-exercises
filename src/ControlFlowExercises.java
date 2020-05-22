@@ -10,8 +10,6 @@ public class ControlFlowExercises {
         Scanner input = new Scanner(System.in);
 
 
-
-
         // While Loop
 //        int i = 5;
 //        while (i <= 15) {
@@ -95,8 +93,36 @@ public class ControlFlowExercises {
 //
 //        } while (userContinue);
 
+//        4. Convert given number grades into letter grades.
+//        Prompt the user for a numerical grade from 0 to 100.
+//        Grade Ranges:
+//        A : 100 - 88
+//        B : 87 - 80
+//        C : 79 - 67
+//        D : 66 - 60
+//        F : 59 - 0
+        boolean anotherGrade = true;
 
-
+        do{
+            System.out.println("Please enter a grade from 0 to 100: ");
+        int gradeInput = Integer.parseInt(input.nextLine());
+        if (gradeInput <= 100 && gradeInput >= 88) {
+            System.out.println("Your grade is an A.");
+        } else if (gradeInput <= 87 && gradeInput >= 80) {
+            System.out.println("Your grade is a B.");
+        } else if (gradeInput <= 79 && gradeInput >= 67) {
+            System.out.println("Your grade is a C.");
+        } else if (gradeInput <= 66 && gradeInput >= 60) {
+            System.out.println("Your grade is a D.");
+        } else {
+            System.out.println("Your grade is an F.");
+        }
+        System.out.println("Would you like to continue? y/n");
+        String response = input.nextLine();
+        if (!response.equals("y")) {
+            anotherGrade = false;
+        }
+    } while (anotherGrade);
     }
 }
 
