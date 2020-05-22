@@ -51,6 +51,7 @@ public class GradesApplication {
         System.out.println("Welcome!\n\nHere are the GitHub usernames of our students:\n");
         int i = 1;
 
+
         do {
             for (String username : students.keySet()) {
                 System.out.printf("| %s | ", username);
