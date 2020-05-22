@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Input {
 
+
 //    Create a class named Input that has a private property named scanner.
 
     //    Creating fields.
@@ -31,15 +32,18 @@ public class Input {
         System.out.println("Please enter either y/n");
         String yesNoInput = scanner.nextLine();
         if (yesNoInput.equals("y")) {
+
             return true;
         }
         return false;
     }
 
+
 //    int getInt(int min, int max). The getInt(int min, int max) method should keep
 //    prompting the user for input until they give an integer within the min and max.
     public int getInt(int min, int max)  {
         System.out.println("Please enter a number between " + min + " and " + max + ".");
+
 //        int getIntMinMaxInput = Integer.parseInt(scanner.nextLine());
         try {
             int getIntMinMaxInput = Integer.valueOf(getString());
@@ -81,6 +85,7 @@ public class Input {
         } else {
             System.out.println("You entered a valid decimal");
         }
+
         return getDoubleMinMaxInput;
     }
 
@@ -94,4 +99,3 @@ public class Input {
 
 
 }
-

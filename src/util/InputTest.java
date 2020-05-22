@@ -1,5 +1,6 @@
 package util;
 
+
 //Create another class named InputTest that has a static main method
 // that uses all of the methods from the Input class.
 
