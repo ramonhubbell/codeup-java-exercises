@@ -13,9 +13,9 @@ public class CircleApp {
 //    object, and displays the circumference and area.
         Input input = new Input();
 //        Circle circle;
-        Circle circle = new Circle(input.getDouble());
-        System.out.printf("The circumference of a circle is %.2f\n" , circle.getCircumference());
-        System.out.printf("The area of a circle is %.2f\n" , circle.getArea());
+//        Circle circle = new Circle(input.getDouble());
+//        System.out.printf("The circumference of a circle is %.2f\n" , circle.getCircumference());
+//        System.out.printf("The area of a circle is %.2f\n" , circle.getArea());
 
 
     }
