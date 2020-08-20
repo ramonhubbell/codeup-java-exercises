@@ -76,7 +76,7 @@ public class Input {
 
 //    double getDouble(double min, double max). The getDouble method should do the same
 //    thing, but with decimal numbers.
-    double getDouble(double min, double max){
+    public double getDouble(double min, double max){
         System.out.println("Please enter a decimal between " + min + " and " + max);
         double getDoubleMinMaxInput = Double.parseDouble(scanner.nextLine());
         if (getDoubleMinMaxInput < min || getDoubleMinMaxInput > max) {
@@ -90,7 +90,7 @@ public class Input {
     }
 
 //    double getDouble()
-    double getDouble() {
+    public double getDouble() {
         System.out.println("Please enter a decimal.");
         double getDoubleInput = Double.parseDouble(scanner.nextLine());
         return getDoubleInput;
