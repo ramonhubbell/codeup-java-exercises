@@ -8,16 +8,11 @@ public class F1Exercise {
 
     public static class Node {
         int val;
-//        Integer mid;
         Node left;
         Node right;
 
-//        public Node() {
-//        }
-
         public Node(int val) {
             this.val = val;
-//            left = right = null;
         }
 
         public Node(int val, Node left, Node right) {
@@ -33,11 +28,11 @@ public class F1Exercise {
 
     public static void main(String[] args) {
 
-//        printFooBarBaz();
+        printFooBarBaz();
 
-//        System.out.println(reverseCharacters("the cat is fat"));
-//        System.out.println(reverseCharacters("band camp is great!"));
-//        [1,2,3,4,5,6,7
+        System.out.println(reverseCharacters("the cat is fat"));
+        System.out.println(reverseCharacters("band camp is great!"));
+
         ArrayList<Integer> F1Numbers = new ArrayList<Integer>();
         F1Numbers.add(1);
         F1Numbers.add(2);
@@ -46,41 +41,39 @@ public class F1Exercise {
         F1Numbers.add(5);
         F1Numbers.add(6);
         F1Numbers.add(7);
-//        F1Numbers.add(8);
-//        F1Numbers.add(9);
 
         System.out.println(F1Numbers);
-        System.out.println(balancedTree(F1Numbers).getVal());
+        System.out.println("Root of Balanced Binary Tree: " + balancedTree( F1Numbers).getVal());
 
     }
 
-//    private static void printFooBarBaz() {
-//        for ( int i = 1; i <= 100; i += 1){
-//            if ( i % 2 == 0 && i % 3 == 0) {
-//                System.out.println( "baz" );
-//            } else if ( i % 2 == 0) {
-//                System.out.println( "foo" );
-//            } else if ( i % 3 == 0) {
-//                System.out.println( "bar");
-//            } else {
-//                System.out.println( i );
-//            }
-//        }
-//    }
+    public static void printFooBarBaz() {
+        for ( int i = 1; i <= 100; i += 1){
+            if ( i % 2 == 0 && i % 3 == 0) {
+                System.out.println( "baz" );
+            } else if ( i % 2 == 0) {
+                System.out.println( "foo" );
+            } else if ( i % 3 == 0) {
+                System.out.println( "bar");
+            } else {
+                System.out.println( i );
+            }
+        }
+    }
 
-//public static String reverseCharacters(String sentence) {
-//    String [] arrayWords = sentence.split(" ");
-//    String [] reversedWords = new String[arrayWords.length];
-//    for(int i = 0; i < arrayWords.length; i++) {
-//        reversedWords[i] = "";
-//        for(int j = arrayWords[i].length() - 1; j >= 0; j--)
-//        {
-//            reversedWords[i] += arrayWords[i].substring( j, j + 1);
-//        }
-//    }
-//    String newString = String.join (" ", reversedWords);
-//    return newString;
-//}
+public static String reverseCharacters(String sentence) {
+    String [] arrayWords = sentence.split(" ");
+    String [] reversedWords = new String[arrayWords.length];
+    for(int i = 0; i < arrayWords.length; i++) {
+        reversedWords[i] = "";
+        for(int j = arrayWords[i].length() - 1; j >= 0; j--)
+        {
+            reversedWords[i] += arrayWords[i].substring( j, j + 1);
+        }
+    }
+    String newString = String.join (" ", reversedWords);
+    return newString;
+}
 
     public static Node balancedTree(ArrayList<Integer> inputList) {
         return helper(inputList, 0, inputList.size() - 1);
@@ -93,11 +86,9 @@ public class F1Exercise {
 
         int mid = low + (high - low) / 2;
 //        System.out.println(mid);
-        //center val of sorted array as the root of the bst
         Node head = new Node(inputList.get(mid));
-        System.out.println(head.val);
+//        System.out.println(head.val);
         head.left = helper(inputList, low, mid - 1);
-        //        right of the mid value should go to the right of this root node to satisfy bst
         head.right = helper(inputList, mid + 1, high);
         return head;
 
