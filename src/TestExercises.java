@@ -32,7 +32,11 @@ public class TestExercises {
         System.out.println(Arrays.toString(array));
 
         int N = scanner.nextInt();
-
+        if ( N % 2 !== 0 ){
+            System.out.println("Weird");
+        }else if( N % 2 == 0 && N >= 2 && N <= 5){
+            System.out.println()
+        }
     }
 //    static void print(String message){
 //        System.out.print(message);
