@@ -1,11 +1,12 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class TestExercises {
 
 //    static int count = 0;
-
+    private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
 //        String message = "Hello";
@@ -29,6 +30,9 @@ public class TestExercises {
         List<String> list = Arrays.asList(array);
         Collections.sort(list);
         System.out.println(Arrays.toString(array));
+
+        int N = scanner.nextInt();
+
     }
 //    static void print(String message){
 //        System.out.print(message);
