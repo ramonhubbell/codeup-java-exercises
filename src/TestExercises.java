@@ -26,16 +26,21 @@ public class TestExercises {
 //        message = message + "World!";
 //        print(message);
 
-        String [] array = {"abc", "2", "10", "0"};
-        List<String> list = Arrays.asList(array);
-        Collections.sort(list);
-        System.out.println(Arrays.toString(array));
+//        String [] array = {"abc", "2", "10", "0"};
+//        List<String> list = Arrays.asList(array);
+//        Collections.sort(list);
+//        System.out.println(Arrays.toString(array));
 
+        System.out.println("Enter a number between 1 and 100: ");
         int N = scanner.nextInt();
-        if ( N % 2 !== 0 ){
+        if ( N % 2 != 0 ){
             System.out.println("Weird");
         }else if( N % 2 == 0 && N >= 2 && N <= 5){
-            System.out.println()
+            System.out.println("Not Weird");
+        }else if( N % 2 == 0 && N >= 6 && N <= 20 ){
+            System.out.println("Weird");
+        }else if (N % 2 == 0 && N > 20 && N <= 100){
+            System.out.println("Not Weird");
         }
     }
 //    static void print(String message){
