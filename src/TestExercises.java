@@ -43,16 +43,26 @@ public class TestExercises {
 //            System.out.println("Not Weird");
 //        }
 
-        Scanner scan = new Scanner(System.in);
-        int i = Integer.parseInt(scan.nextLine());
+//        Scanner scan = new Scanner(System.in);
+//        int i = Integer.parseInt(scan.nextLine());
+//
+//        // Write your code here.
+//        double d = Double.parseDouble(scan.nextLine());
+//        String s = scan.nextLine();
+//
+//        System.out.println("String: " + s);
+//        System.out.println("Double: " + d);
+//        System.out.println("Int: " + i);
 
-        // Write your code here.
-        double d = Double.parseDouble(scan.nextLine());
-        String s = scan.nextLine();
-
-        System.out.println("String: " + s);
-        System.out.println("Double: " + d);
-        System.out.println("Int: " + i);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================");
+        for(int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+//            //Complete this line
+            System.out.printf("%-15s" + "%03d%n", s1, x);
+        }
+        System.out.println("================================");
     }
 //    static void print(String message){
 //        System.out.print(message);
