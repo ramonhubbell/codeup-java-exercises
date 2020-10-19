@@ -31,17 +31,28 @@ public class TestExercises {
 //        Collections.sort(list);
 //        System.out.println(Arrays.toString(array));
 
-        System.out.println("Enter a number between 1 and 100: ");
-        int N = scanner.nextInt();
-        if ( N % 2 != 0 ){
-            System.out.println("Weird");
-        }else if( N % 2 == 0 && N >= 2 && N <= 5){
-            System.out.println("Not Weird");
-        }else if( N % 2 == 0 && N >= 6 && N <= 20 ){
-            System.out.println("Weird");
-        }else if (N % 2 == 0 && N > 20 && N <= 100){
-            System.out.println("Not Weird");
-        }
+//        System.out.println("Enter a number between 1 and 100: ");
+//        int N = scanner.nextInt();
+//        if ( N % 2 != 0 ){
+//            System.out.println("Weird");
+//        }else if( N % 2 == 0 && N >= 2 && N <= 5){
+//            System.out.println("Not Weird");
+//        }else if( N % 2 == 0 && N >= 6 && N <= 20 ){
+//            System.out.println("Weird");
+//        }else if (N % 2 == 0 && N > 20 && N <= 100){
+//            System.out.println("Not Weird");
+//        }
+
+        Scanner scan = new Scanner(System.in);
+        int i = Integer.parseInt(scan.nextLine());
+
+        // Write your code here.
+        double d = Double.parseDouble(scan.nextLine());
+        String s = scan.nextLine();
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
     }
 //    static void print(String message){
 //        System.out.print(message);
