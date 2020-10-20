@@ -65,24 +65,49 @@ public class TestExercises {
 //        }
 //        System.out.println("================================");
 
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
-        for (int i = 0; i < t; i++) {
-            int a = in.nextInt();
-            int b = in.nextInt();
-            int n = in.nextInt();
-            int result = 0;
-            for (int u = 0; u < n; u++) {
-                if (u == 0) {
-                    result = result + (a + ((int) Math.pow(2, u) * b));
-                } else {
-                    result = result + ((int) Math.pow(2, u) * b);
+//        Scanner in = new Scanner(System.in);
+//        int t = in.nextInt();
+//        for (int i = 0; i < t; i++) {
+//            int a = in.nextInt();
+//            int b = in.nextInt();
+//            int n = in.nextInt();
+//            int result = 0;
+//            for (int u = 0; u < n; u++) {
+//                if (u == 0) {
+//                    result = result + (a + ((int) Math.pow(2, u) * b));
+//                } else {
+//                    result = result + ((int) Math.pow(2, u) * b);
+//                }
+//                System.out.print(result + " ");
+//            }
+//            System.out.println();
+//        }
+//            in.close();
+
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+
+        for(int i = 0; i < t; i++) {
+            try {
+                long x = sc.nextLong();
+                System.out.println(x + " can be fitted in:");
+                if(x >= -128 && x <= 127){
+                    System.out.println("* byte");
                 }
-                System.out.print(result + " ");
+                //Complete the code
+                if (x >= -32768 && x <= 32767){
+                    System.out.println("* short");
+                }if (x >= -2147483648 && x <= 2147483647) {
+                    System.out.println("* int");
+                }if ( x >= -9223372036854775808L && x <= 9223372036854775807L){
+                    System.out.println("* long");
+                    }
             }
-            System.out.println();
+            catch(Exception e) {
+                System.out.println(sc.next() + " can't be fitted anywhere.");
+            }
+
         }
-            in.close();
         }
 //    static void print(String message){
 //        System.out.print(message);
