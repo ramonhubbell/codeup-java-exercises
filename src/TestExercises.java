@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class TestExercises {
 
-//    static int count = 0;
+    //    static int count = 0;
     private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
 //        String message = "Hello";
@@ -54,18 +55,37 @@ public class TestExercises {
 //        System.out.println("Double: " + d);
 //        System.out.println("Int: " + i);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("================================");
-        for(int i = 0; i < 3; i++) {
-            String s1 = sc.next();
-            int x = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("================================");
+//        for(int i = 0; i < 3; i++) {
+//            String s1 = sc.next();
+//            int x = sc.nextInt();
 //            //Complete this line
-            System.out.printf("%-15s" + "%03d%n", s1, x);
+//            System.out.printf("%-15s" + "%03d%n", s1, x);
+//        }
+//        System.out.println("================================");
+
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for (int i = 0; i < t; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            int result = 0;
+            for (int u = 0; u < n; u++) {
+                if (u == 0) {
+                    result = result + (a + ((int) Math.pow(2, u) * b));
+                } else {
+                    result = result + ((int) Math.pow(2, u) * b);
+                }
+                System.out.print(result + " ");
+            }
+            System.out.println();
         }
-        System.out.println("================================");
-    }
+            in.close();
+        }
 //    static void print(String message){
 //        System.out.print(message);
 //        message += " ";
 //    }
-}
+    }
