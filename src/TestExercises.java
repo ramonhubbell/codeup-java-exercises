@@ -15,7 +15,7 @@ import java.util.regex.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
-java.util.Calendar;
+//java.util.Calendar;
 
 public class TestExercises {
 
@@ -33,10 +33,12 @@ public class TestExercises {
     }
 
     public static String findDay(int month, int day, int year) {
+
         Calendar calendar = Calendar.getInstance();
+        System.out.println(Calendar.getInstance());
         calendar.set(month, day, year);
         String dayOfTheWeek = ;
-        return dayOfTheWeek;
+        return "";
     }
 
     public static void main(String[] args) throws IOException{
@@ -185,25 +187,27 @@ public class TestExercises {
 //    }
 //}
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
-
-        int month = Integer.parseInt(firstMultipleInput[0]);
-
-        int day = Integer.parseInt(firstMultipleInput[1]);
-
-        int year = Integer.parseInt(firstMultipleInput[2]);
-
-        String res = TestExercises.findDay(month, day, year);
-
-        bufferedWriter.write(res);
-        bufferedWriter.newLine();
-
-        bufferedReader.close();
-        bufferedWriter.close();
-    }
+        findDay(08, 05, 2015);
+        System.out.println(findDay(08, 05, 2015));
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//
+//        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+//
+//        int month = Integer.parseInt(firstMultipleInput[0]);
+//
+//        int day = Integer.parseInt(firstMultipleInput[1]);
+//
+//        int year = Integer.parseInt(firstMultipleInput[2]);
+//
+//        String res = TestExercises.findDay(month, day, year);
+//
+//        bufferedWriter.write(res);
+//        bufferedWriter.newLine();
+//
+//        bufferedReader.close();
+//        bufferedWriter.close();
+//    }
 }
 
 
