@@ -117,9 +117,16 @@ public class TestExercises {
 //                System.out.println(sc.next() + " can't be fitted anywhere.");
 //            }
 //        }
-        int mask = 0x000F;
-        int value = 0x2222;
-        System.out.println(value & mask);
+//        int mask = 0x000F;
+//        int value = 0x2222;
+//        System.out.println(value & mask);
+
+        if(flag){
+            int area = B * H;
+            System.out.print(area);
+        }
+
+
         }
 //    static void print(String message){
 //        System.out.print(message);
