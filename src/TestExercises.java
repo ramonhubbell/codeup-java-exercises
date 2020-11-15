@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.*;
+import java.security.*;
 
 public class TestExercises {
 
@@ -121,15 +123,53 @@ public class TestExercises {
 //        int value = 0x2222;
 //        System.out.println(value & mask);
 
-        if(flag){
-            int area = B * H;
-            System.out.print(area);
-        }
+        DoNotTerminate.forbidExit();
+
+        try {
+            Scanner in = new Scanner(System.in);
+            int n = in .nextInt();
+            in.close();
+            String s=???; /*Complete this line below*/
+
+            //Write your code here
 
 
+            if (n == Integer.parseInt(s)) {
+                System.out.println("Good job");
+            } else {
+                System.out.println("Wrong answer.");
+            }
+        } catch (DoNotTerminate.ExitTrappedException e) {
+            System.out.println("Unsuccessful Termination!!");
         }
+    }
+}
+
+//The following class will prevent you from terminating the code using exit(0)!
+class DoNotTerminate {
+
+    public static class ExitTrappedException extends SecurityException {
+
+        private static final long serialVersionUID = 1;
+    }
+
+    public static void forbidExit() {
+        final SecurityManager securityManager = new SecurityManager() {
+            @Override
+            public void checkPermission(Permission permission) {
+                if (permission.getName().contains("exitVM")) {
+                    throw new ExitTrappedException();
+                }
+            }
+        };
+        System.setSecurityManager(securityManager);
+    }
+}
+
+
+//        }
 //    static void print(String message){
 //        System.out.print(message);
 //        message += " ";
 //    }
-    }
+//    }
