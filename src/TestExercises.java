@@ -129,8 +129,8 @@ public class TestExercises {
             Scanner in = new Scanner(System.in);
             int n = in .nextInt();
             in.close();
-            String s=???; /*Complete this line below*/
-
+//            String s=???; Complete this line below
+              String s = Integer.toString(n);
             //Write your code here
 
 
