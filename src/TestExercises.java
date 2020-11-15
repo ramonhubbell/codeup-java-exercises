@@ -4,6 +4,18 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.*;
 import java.security.*;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+java.util.Calendar;
 
 public class TestExercises {
 
@@ -20,7 +32,14 @@ public class TestExercises {
 
     }
 
-    public static void main(String[] args) {
+    public static String findDay(int month, int day, int year) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(month, day, year);
+        String dayOfTheWeek = ;
+        return dayOfTheWeek;
+    }
+
+    public static void main(String[] args) throws IOException{
 
 //        String message = "Hello";
 //        for (int i = 0; i < message.length(); i++){
@@ -123,48 +142,70 @@ public class TestExercises {
 //        int value = 0x2222;
 //        System.out.println(value & mask);
 
-        DoNotTerminate.forbidExit();
-
-        try {
-            Scanner in = new Scanner(System.in);
-            int n = in .nextInt();
-            in.close();
+//        DoNotTerminate.forbidExit();
+//
+//        try {
+//            Scanner in = new Scanner(System.in);
+//            int n = in .nextInt();
+//            in.close();
 //            String s=???; Complete this line below
-              String s = Integer.toString(n);
+//              String s = Integer.toString(n);
             //Write your code here
 
 
-            if (n == Integer.parseInt(s)) {
-                System.out.println("Good job");
-            } else {
-                System.out.println("Wrong answer.");
-            }
-        } catch (DoNotTerminate.ExitTrappedException e) {
-            System.out.println("Unsuccessful Termination!!");
-        }
-    }
-}
+//            if (n == Integer.parseInt(s)) {
+//                System.out.println("Good job");
+//            } else {
+//                System.out.println("Wrong answer.");
+//            }
+//        } catch (DoNotTerminate.ExitTrappedException e) {
+//            System.out.println("Unsuccessful Termination!!");
+//        }
+//    }
+//}
 
 //The following class will prevent you from terminating the code using exit(0)!
-class DoNotTerminate {
+//class DoNotTerminate {
+//
+//    public static class ExitTrappedException extends SecurityException {
+//
+//        private static final long serialVersionUID = 1;
+//    }
+//
+//    public static void forbidExit() {
+//        final SecurityManager securityManager = new SecurityManager() {
+//            @Override
+//            public void checkPermission(Permission permission) {
+//                if (permission.getName().contains("exitVM")) {
+//                    throw new ExitTrappedException();
+//                }
+//            }
+//        };
+//        System.setSecurityManager(securityManager);
+//    }
+//}
 
-    public static class ExitTrappedException extends SecurityException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        private static final long serialVersionUID = 1;
-    }
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-    public static void forbidExit() {
-        final SecurityManager securityManager = new SecurityManager() {
-            @Override
-            public void checkPermission(Permission permission) {
-                if (permission.getName().contains("exitVM")) {
-                    throw new ExitTrappedException();
-                }
-            }
-        };
-        System.setSecurityManager(securityManager);
+        int month = Integer.parseInt(firstMultipleInput[0]);
+
+        int day = Integer.parseInt(firstMultipleInput[1]);
+
+        int year = Integer.parseInt(firstMultipleInput[2]);
+
+        String res = TestExercises.findDay(month, day, year);
+
+        bufferedWriter.write(res);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
     }
 }
+
 
 
 //        }
