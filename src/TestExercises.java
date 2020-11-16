@@ -22,26 +22,28 @@ public class TestExercises {
     //    static int count = 0;
     private static final Scanner scanner = new Scanner(System.in);
 
-    class Arithmetic{
-        int add(int a, int b){
+    class Arithmetic {
+        int add(int a, int b) {
             return a + b;
         }
     }
 
-    class Adder extends Arithmetic{
+    class Adder extends Arithmetic {
 
     }
 
-    public static String findDay(int month, int day, int year) {
+//    public static String findDay(int month, int day, int year) {
+//
+//        int dayOfWeek = Calendar.DAY_OF_WEEK;
+//        int g = Calendar.DATE;
+//        System.out.println("Calendar.getInstance(): " + dayOfWeek);
+//        System.out.println(g);
+//        calendar.set(month, day, year);
+//        String dayOfTheWeek = ;
+//        return "";
+//    }
 
-        Calendar calendar = Calendar.getInstance();
-        System.out.println(Calendar.getInstance());
-        calendar.set(month, day, year);
-        String dayOfTheWeek = ;
-        return "";
-    }
-
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
 
 //        String message = "Hello";
 //        for (int i = 0; i < message.length(); i++){
@@ -152,7 +154,7 @@ public class TestExercises {
 //            in.close();
 //            String s=???; Complete this line below
 //              String s = Integer.toString(n);
-            //Write your code here
+        //Write your code here
 
 
 //            if (n == Integer.parseInt(s)) {
@@ -187,8 +189,8 @@ public class TestExercises {
 //    }
 //}
 
-        findDay(08, 05, 2015);
-        System.out.println(findDay(08, 05, 2015));
+//        findDay(08, 05, 2015);
+//        System.out.println("findDay(): " + findDay(11, 30, 2020));
 //        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 //        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 //
@@ -208,8 +210,8 @@ public class TestExercises {
 //        bufferedReader.close();
 //        bufferedWriter.close();
 //    }
+    }
 }
-
 
 
 //        }
