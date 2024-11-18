@@ -15,37 +15,39 @@ import static java.util.stream.Collectors.toList;
 public class TwoDArray {
 
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number of rows and columns:");
-        int rows = scanner.nextInt();
-        int columns = scanner.nextInt();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter the number of rows and columns:");
+//        int rows = scanner.nextInt();
+//        int columns = scanner.nextInt();
+//
+//        int [][] array = new int[rows][columns];
+//        System.out.println("Enter the elements of the 2D array:");
+//        for (int i = 0; i < rows; i++){
+//            for (int j = 0; j < columns; j++){
+//                array [i][j] = scanner.nextInt();
+//            }
+//        }
+//        scanner.close();
 
-        int [][] array = new int[rows][columns];
-        System.out.println("Enter the elements of the 2D array:");
-        for (int i = 0; i < rows; i++){
-            for (int j = 0; j < columns; j++){
-                array [i][j] = scanner.nextInt();
-            }
-        }
-        scanner.close();
-//        System.out.println(Arrays.deepToString(array));
+//        int maxValue = 0;
+//        for (int i = 0; i <= 3; i++) {
+//
+//            for (int j = 0; j <= 3; j++) {
+//                int sum = array[i][j] + array[i][j+1] + array[i][j+2] +
+//                           array[i+1][j+1] +
+//                           array[i+2][j] + array[i+2][j+1] + array[i+2][j+2];
+//            System.out.println("Hourglass sum at (" + i + "," + j + "): " + sum);
+//                if(sum > maxValue){
+//                    maxValue = sum;
+//                }
+//            }
+//
+//        }
+//        System.out.println("maxValue: " + maxValue);
 
-        for(int i = 0; i < rows; i++ ){
-            for(int j = 0; j < columns; j++){
-                System.out.print(array[i][j]);
-//                System.out.print(array[i][j + 1]);
-            }
-            System.out.println();
-        }
-        System.out.println(array[0][0]);
-        System.out.println(array[0][1]);
-        System.out.println(array[1][0]);
-        System.out.println(array[1][1]);
-        int sum = array[0][0] + array[0][1];
-        int sum1 = array[1][0] + array[1][1];
-        System.out.println("sum: " + sum);
-        System.out.println("sum1: " + sum1);
-        //ToDO how to traverse a shape through a 2D array?
+
+
+
 //        int a[][] = new int[6][6];
 //        int maxSum = Integer.MIN_VALUE;
 //        try (Scanner scanner = new Scanner(System.in);) {
@@ -85,7 +87,7 @@ public class TwoDArray {
 //
 //        List<List<Integer>> arr = new ArrayList<>();
 //
-//        IntStream.range(0, 3).forEach(i -> {
+//        IntStream.range(0, 6).forEach(i -> {
 //            try {
 //                arr.add(
 //                        Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
@@ -98,6 +100,20 @@ public class TwoDArray {
 //        });
 //
 //        bufferedReader.close();
+        List<List<Integer>> arr = new ArrayList<>();
+        arr.add(Arrays.asList(1,2));
+        arr.add(Arrays.asList(3,4));
+        System.out.println("arr: " + arr);
+        //ToDO hard code a 6 x 6 2d array.
+        for (List<Integer> row :  arr){
+            System.out.println("arr in first loop, arr.get(0): " + arr.get(0));
+            System.out.println("arr in first loop, arr.get(1): " + arr.get(1));
+            for (Integer number : row ){
+                System.out.println("row: " + row);
+                System.out.println("number: " + number);
+            }
+//            System.out.println();
+        }
 
         //Brief explanation: In the constraints it say's that the max number inside the array it would be -9 and 9,
 //        so that means the minus possible value it could be -9, because if you do the sum of -9, you would get -63.
